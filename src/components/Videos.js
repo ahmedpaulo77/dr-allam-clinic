@@ -3,11 +3,11 @@ import './Videos.css';
 
 const VIDEOS = [
   {
-    src: process.env.PUBLIC_URL + '/videos/vid1.mp4',
+    src: process.env.PUBLIC_URL + '/videos/vid1.mp4#t=0.001',
     title: 'أفضل سناك طبيعي يسد الشهية في الشتا ويحرق دهون 🍏', 
   },
   {
-    src: process.env.PUBLIC_URL + '/videos/vid2.mp4',
+    src: process.env.PUBLIC_URL + '/videos/vid2.mp4#t=0.001',
     title: 'أخطاء كارثية بتدمر الحرق أثناء الدايت بنقع فيها كلنا ⚠️', 
   },
 ];
