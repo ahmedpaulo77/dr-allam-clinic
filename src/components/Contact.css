@@ -1,0 +1,231 @@
+/* ===== Contact Section ===== */
+.contact {
+  padding: 90px 5%;
+  background: var(--white);
+}
+
+.contact__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Info Side */
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__info-intro {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+}
+
+/* Contact Items */
+.contact__items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  transition: all 0.3s ease;
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact__item:hover {
+  border-color: rgba(26, 107, 60, 0.2);
+  background: var(--white);
+  transform: translateX(-4px);
+  box-shadow: 0 8px 25px rgba(26, 107, 60, 0.08);
+}
+
+.contact__item-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact__item-icon.green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+.contact__item-icon.whatsapp { background: linear-gradient(135deg, #e8f5ef, #b2dfdb); }
+.contact__item-icon.location { background: linear-gradient(135deg, #fff8e1, #ffecb3); }
+.contact__item-icon.phone { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+
+.contact__item-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-gray);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact__item-value {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+/* Socials Row */
+.contact__socials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact__social.instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(253, 29, 29, 0.2);
+}
+
+.contact__social.tiktok {
+  background: #010101;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact__social:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* CTA Card */
+.contact__cta-card {
+  background: linear-gradient(160deg, #1a2e22, #0f4425);
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 20px 50px rgba(26, 107, 60, 0.25);
+  position: sticky;
+  top: 100px;
+  overflow: hidden;
+}
+
+.contact__cta-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.1), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact__cta-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.contact__cta-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.contact__cta-desc {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.contact__cta-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  direction: ltr;
+  letter-spacing: 1px;
+}
+
+.contact__cta-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 24px 0;
+}
+
+.contact__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__hour-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.contact__hour-day {
+  font-weight: 700;
+}
+
+.contact__hour-time {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .contact__cta-card {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 60px 5%;
+  }
+
+  .contact__cta-card {
+    padding: 30px 22px;
+  }
+}

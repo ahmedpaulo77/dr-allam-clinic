@@ -1,0 +1,238 @@
+.videos {
+  padding: 90px 5%;
+  background: linear-gradient(160deg, #1a2e22 0%, #0f4425 100%);
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.videos__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.videos__header .section-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.videos__header .section-subtitle {
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+.videos__header .divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a84c, #f0d580);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.videos__local-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-card-local {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.video-card-local:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-4px);
+}
+
+.video-card-local__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 480px;
+  background: #000000;
+  overflow: hidden;
+}
+
+.video-card-local__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 هنا السحر! الفيديو هيملأ الكارد بالكامل زي تيك توك */
+  display: block;
+}
+
+.video-card-local__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
+}
+
+.video-card-local:hover .video-card-local__overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.video-card-local__play-btn {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.video-card-local__tap {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.video-card-local__info {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.video-card-local__num {
+  background: rgba(201, 168, 76, 0.15);
+  color: #f0d580;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.video-card-local__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* 🌟 ===== تنسيقات الـ Lightbox السحري ===== */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 420px; /* العرض المثالي لفيديو الموبايل الطولي */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 75vh;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+  margin-top: 15px;
+  color: #fff;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.lightbox-caption h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* زر القفل X */
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 2100;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+/* الأسهم يمين وشمال */
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 24px;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 2100;
+  user-select: none;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-arrow--right {
+  right: 5%; /* سهم التالي على اليمين */
+}
+
+.lightbox-arrow--left {
+  left: 5%; /* سهم السابق على الشمال */
+}
+
+@media (max-width: 768px) {
+  .videos__local-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+  .lightbox-arrow {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+  .lightbox-arrow--right { right: 2%; }
+  .lightbox-arrow--left { left: 2%; }
+}

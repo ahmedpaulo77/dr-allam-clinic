@@ -1,0 +1,323 @@
+/* ===== About Page ===== */
+.about-hero {
+  padding: 80px 5% 60px;
+  background: linear-gradient(160deg, #e8f5e9 0%, #f0fdf4 60%, #fff8e1 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(26, 107, 60, 0.07), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-hero__card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(26, 107, 60, 0.12);
+  position: relative;
+  z-index: 1;
+  max-width: 380px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* صورة الدكتور تملأ الجزء العلوي */
+.about-hero__img-wrap {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  background: #e8f5e9;
+  flex-shrink: 0;
+}
+
+.about-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.about-hero__card:hover .about-hero__img {
+  transform: scale(1.04);
+}
+
+/* Info تحت الصورة */
+.about-hero__info {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.about-hero__name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+
+.about-hero__spec {
+  font-size: 0.92rem;
+  color: var(--text-gray);
+  font-weight: 600;
+}
+
+.about-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.about-hero__tag {
+  background: #e8f5e9;
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* About Story Section */
+.about-story {
+  padding: 80px 5%;
+  background: var(--white);
+}
+
+.about-story__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-story__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-story__stat {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1.5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.about-story__stat:hover {
+  border-color: rgba(26, 107, 60, 0.2);
+  background: var(--white);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.about-story__stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  display: block;
+}
+
+.about-story__stat-label {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.about-story__stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.about-story__text h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-bottom: 16px;
+}
+
+.about-story__text p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+
+/* Credentials */
+.about-creds {
+  padding: 80px 5%;
+  background: var(--bg-light);
+}
+
+/* Row layout — كروت جنب بعض بس مش متضغطين */
+.about-creds__row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  max-width: 860px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* ===== Cred Card ===== */
+.cred-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.35s ease;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cred-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* صورة أو placeholder */
+.cred-card__img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cred-card--green .cred-card__img-wrap {
+  background: linear-gradient(160deg, #1a4d2e, #2d7a4f);
+}
+
+.cred-card--gold .cred-card__img-wrap {
+  background: linear-gradient(160deg, #5c3d00, #a07020);
+}
+
+.cred-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cred-card__img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cred-card__big-badge {
+  font-size: 5rem;
+  opacity: 0.6;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  transition: transform 0.35s ease;
+}
+
+.cred-card:hover .cred-card__big-badge {
+  transform: scale(1.15);
+}
+
+/* Label badge فوق الصورة */
+.cred-card__label {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cred-card--green .cred-card__label {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.cred-card--gold .cred-card__label {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Body */
+.cred-card__body {
+  padding: 24px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.cred-card__title {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  line-height: 1.4;
+}
+
+.cred-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .about-creds__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cred-card {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-story__inner {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero__card {
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero { padding: 60px 5%; }
+  .about-story { padding: 60px 5%; }
+  .about-creds { padding: 60px 5%; }
+}

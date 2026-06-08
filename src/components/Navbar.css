@@ -1,0 +1,221 @@
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(26, 107, 60, 0.08);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  height: 68px;
+  box-shadow: 0 4px 30px rgba(26, 107, 60, 0.15);
+}
+
+.navbar__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.navbar__logo-icon {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(26, 107, 60, 0.3);
+  flex-shrink: 0;
+}
+
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.navbar__logo-name {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+
+.navbar__logo-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+/* Nav Links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.navbar__links li a,
+.navbar__links li button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.navbar__links li a:hover,
+.navbar__links li button:hover {
+  color: var(--primary);
+  background: #f0faf4;
+}
+
+.navbar__links li a.active,
+.navbar__links li button.active {
+  color: var(--primary);
+  background: #e8f5e9;
+  font-weight: 700;
+}
+
+/* CTA Button in Navbar */
+/* CTA Button in Navbar - مصلح بالكامل */
+.navbar__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20) !important; /* أخضر عيادي دافئ وفخم */
+  color: #ffffff !important; /* خط أبيض ناصع وواضح */
+  padding: 10px 24px !important; /* مساحة متناسقة جوة الشريط */
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2) !important; /* ظل ناعم مريح للعين */
+  transition: all 0.3s ease !important;
+}
+
+.navbar__cta:hover {
+  transform: translateY(-2px) !important;
+  background: linear-gradient(135deg, #1b5e20, #0f4425) !important; /* تأثير غامق شيك عند اللمس */
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35) !important;
+  color: #ffffff !important;
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  background: none;
+  border: none;
+}
+
+.navbar__hamburger:hover {
+  background: #f0faf4;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--primary-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar__hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.navbar__hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar__hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 5% 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+
+  .navbar__links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .navbar__links li {
+    width: 100%;
+  }
+
+  .navbar__links li a,
+  .navbar__links li button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .navbar__cta {
+    justify-content: center;
+    margin-top: 8px;
+  }
+}

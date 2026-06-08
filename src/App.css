@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* ===== App Layout ===== */
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* ===== Page Wrapper ===== */
+.page {
+  flex: 1;
+  padding-top: 80px; /* offset for fixed navbar */
+}
+
+/* ===== Section Base ===== */
+.section {
+  padding: 80px 5%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title span {
+  color: var(--gold);
+}
+
+/* ===== Divider ===== */
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+  border-radius: 2px;
+  margin: 12px auto 40px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(26, 107, 60, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(26, 107, 60, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--primary-dark);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.35);
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(201, 168, 76, 0.5);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===== Badge ===== */
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge-green {
+  background: #e8f5e9;
+  color: var(--primary);
+}
+
+.badge-gold {
+  background: #fff8e1;
+  color: #b8860b;
+}
+
+/* ===== Responsive Grid ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 5%; }
+  .section-title { font-size: 1.6rem; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .page { padding-top: 70px; }
+}
+
+/* ===== WhatsApp Floating Button ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--white);
+  padding: 14px 22px 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+
+.whatsapp-float__icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.whatsapp-float__label {
+  white-space: nowrap;
+}
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45); }
+  50%       { box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7); }
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float {
+    bottom: 20px;
+    left: 16px;
+    padding: 12px 18px 12px 14px;
+    font-size: 0.88rem;
   }
 }

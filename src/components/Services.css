@@ -1,0 +1,117 @@
+/* ===== Services Section ===== */
+.services {
+  padding: 90px 5%;
+  background: var(--white);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Service Card */
+.service-card {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  border: 1.5px solid transparent;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(26, 107, 60, 0.04), rgba(201, 168, 76, 0.04));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: var(--radius);
+}
+
+.service-card:hover {
+  border-color: rgba(26, 107, 60, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(26, 107, 60, 0.12);
+  background: var(--white);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+  transition: transform 0.35s ease;
+}
+
+.service-card:hover .service-card__icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.service-card__icon.green {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.service-card__icon.gold {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+}
+
+.service-card__icon.teal {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+}
+
+.service-card__icon.blue {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.service-card__icon.purple {
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+}
+
+.service-card__icon.red {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+}
+
+.service-card__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.service-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    padding: 60px 5%;
+  }
+}
