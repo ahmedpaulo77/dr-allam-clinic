@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, TrendingDown, ArrowLeft, ChevronDown } from 'lucide-react';
+import { Award, TrendingDown, ArrowLeft,   } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import './Hero.css';
 import drAllamImg from '../images/dr-allam.jpg';
