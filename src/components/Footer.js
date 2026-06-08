@@ -7,8 +7,8 @@ const WHATSAPP_URL =
   'https://wa.me/201100690997?text=' +
   encodeURIComponent('السلام عليكم دكتور، أرغب في حجز موعد.');
 
-const INSTAGRAM_URL = 'https://www.instagram.com/';
-const TIKTOK_URL = 'https://www.tiktok.com/';
+const INSTAGRAM_URL = 'https://www.instagram.com/dr_mahmoudallam?igsh=YWk1NGtla2ZveXoz&utm_source=qr';
+const TIKTOK_URL = 'https://www.tiktok.com/@dr.mhamoud.allam?_r=1&_t=ZS-972bmbPS1ES';
 
 export default function Footer({ onNavigate }) {
   return (
