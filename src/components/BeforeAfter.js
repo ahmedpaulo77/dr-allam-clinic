@@ -8,7 +8,7 @@ import result3 from '../images/3.jpg';
 
 const WHATSAPP_URL =
   'https://wa.me/201100690997?text=' +
-  encodeURIComponent('السلام عليكم دكتور 🌿 شفت النتائج وعايز ابدأ رحلتي معاك.');
+  encodeURIComponent('السلام عليكم دكتور  شفت النتائج وعايز ابدأ  معاك.');
 
 // كل صورة فيها قبل وبعد في نفس الصورة
 const RESULTS = [
