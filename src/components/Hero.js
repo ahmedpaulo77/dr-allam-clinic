@@ -64,10 +64,9 @@ export default function Hero({ onNavigate }) {
             </div>
             <div className="hero__card-info-content">
               <div className="hero__card-name">د. محمود علام</div>
-              <div className="hero__card-spec">أخصائى تغذية علاجية وتخسيس</div>
+              <div className="hero__card-spec">أخصائى تغذية علاجية  </div>
               <div className="hero__card-tags">
-                <span className="hero__card-tag">تخسيس</span>
-                <span className="hero__card-tag">تغذية علاجية</span>
+                 <span className="hero__card-tag">علاج السمنه والنحافه</span>
               </div>
             </div>
           </div>

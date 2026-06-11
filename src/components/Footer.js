@@ -26,7 +26,7 @@ export default function Footer({ onNavigate }) {
             </div>
           </div>
           <p className="footer__desc">
-            أخصائى تغذية علاجية وتخسيس. نقدم أنظمة غذائية مخصصة ومتابعة دقيقة
+            أخصائى تغذية علاجية  . نقدم أنظمة غذائية مخصصة ومتابعة دقيقة
             لمساعدتك في تحقيق أهدافك الصحية بأمان وفاعلية.
           </p>
           <div className="footer__social">

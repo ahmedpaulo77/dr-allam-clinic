@@ -12,7 +12,7 @@ const CREDENTIALS = [
     badge: <GraduationCap size={52} color="rgba(255,255,255,0.5)" />,
     label: 'مؤهل علمي',
     title: 'ماجستير التغذية العلاجية',
-    desc: 'Scope certified by the World Obesity Federation.',
+    desc: 'شهادة SCOPE المعتمدة دولياً من الاتحاد العالمي للسمنة 🎓📜',
     color: 'green',
   },
   {
@@ -63,7 +63,7 @@ export default function About() {
             <h1 className="about-hero__name">د. محمود علام</h1>
             <p className="about-hero__spec">أخصائى تغذية علاجية — بنها</p>
             <div className="about-hero__tags">
-              <span className="about-hero__tag">تخسيس</span>
+              <span className="about-hero__tag">علاج السمنه والنحافه</span>
               <span className="about-hero__tag">تغذية علاجية</span>
               <span className="about-hero__tag">أونلاين</span>
             </div>
@@ -87,7 +87,7 @@ export default function About() {
           <div className="about-story__text">
             <h3>من هو الدكتور محمود؟</h3>
             <p>
-              دكتور محمود علام أخصائى تغذية علاجية وتخسيس، يعمل في مجال التغذية
+              دكتور محمود علام أخصائى تغذية علاجية   يعمل في مجال التغذية
               منذ أكثر من 3 سنوات وحقق نتائج مذهلة مع مئات المرضى من مختلف المحافظات.
             </p>
             <p>
