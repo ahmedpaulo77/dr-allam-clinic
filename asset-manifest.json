@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dr-allam-clinic/static/css/main.a298e82b.css",
-    "main.js": "/dr-allam-clinic/static/js/main.ee393966.js",
+    "main.js": "/dr-allam-clinic/static/js/main.5a41c8e7.js",
     "static/js/453.7145b28e.chunk.js": "/dr-allam-clinic/static/js/453.7145b28e.chunk.js",
     "static/media/3.jpg": "/dr-allam-clinic/static/media/3.5738d90db28b7a9f9ab6.jpg",
     "static/media/1.jpg": "/dr-allam-clinic/static/media/1.c15cc6581a12ff6e2e1c.jpg",
@@ -11,11 +11,11 @@
     "static/media/4.jpg": "/dr-allam-clinic/static/media/4.49d400c89355570267cd.jpg",
     "index.html": "/dr-allam-clinic/index.html",
     "main.a298e82b.css.map": "/dr-allam-clinic/static/css/main.a298e82b.css.map",
-    "main.ee393966.js.map": "/dr-allam-clinic/static/js/main.ee393966.js.map",
+    "main.5a41c8e7.js.map": "/dr-allam-clinic/static/js/main.5a41c8e7.js.map",
     "453.7145b28e.chunk.js.map": "/dr-allam-clinic/static/js/453.7145b28e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a298e82b.css",
-    "static/js/main.ee393966.js"
+    "static/js/main.5a41c8e7.js"
   ]
 }
