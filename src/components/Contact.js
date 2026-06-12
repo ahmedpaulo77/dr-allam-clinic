@@ -59,7 +59,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="contact__item-label">عنوان العيادة</div>
-                <div className="contact__item-value">بنها — عمارة بنك القاهرة، أمام برج مكة</div>
+                <div className="contact__item-value">بنها — عمارة بنك القاهرة، أمام برج مكة , لقاهره التجمع الخامس (قريبا )</div>
               </div>
             </div>
 
@@ -108,7 +108,7 @@ export default function Contact() {
             </p>
             <div className="contact__hour-row">
               <span className="contact__hour-day">السبت — الخميس</span>
-              <span className="contact__hour-time">10 ص — 10 م</span>
+              <span className="contact__hour-time">3 م — 10 م</span>
             </div>
             <div className="contact__hour-row">
               <span className="contact__hour-day">الجمعة</span>

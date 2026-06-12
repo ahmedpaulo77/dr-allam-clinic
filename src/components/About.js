@@ -1,9 +1,8 @@
 import React from "react";
-import { GraduationCap,  Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Calendar, MapPin } from "lucide-react";
 import "./About.css";
-import Videos from "./Videos";
 import cred1 from "../images/4.jpg";
- import drAllamImg from "../images/dr-allam.jpg";
+import drAllamImg from "../images/dr-allam.jpg";
 
 const CREDENTIALS = [
   {
@@ -11,15 +10,14 @@ const CREDENTIALS = [
     badge: <GraduationCap size={52} color="rgba(255,255,255,0.5)" />,
     label: "مؤهل علمي",
     title: " شهادة SCOPE المعتمدة دولياً من الاتحاد العالمي للسمنة 🎓📜 ",
-     color: "green",
+    color: "green",
   },
-  
 ];
 
 const STATS = [
   {
     icon: <Calendar size={22} color="var(--primary-light)" />,
-    num: "3+",
+    num: "8+",
     label: "سنوات خبرة",
   },
   {
@@ -64,7 +62,9 @@ export default function About() {
           </div>
           <div className="about-hero__info">
             <h1 className="about-hero__name">د. محمود علام</h1>
-            <p className="about-hero__spec">أخصائى تغذية علاجية — بنها</p>
+            <p className="about-hero__spec">أخصائى تغذية علاجية: بنها/
+               القاهره التجمع الخامس (قريبا )
+            </p>
             <div className="about-hero__tags">
               <span className="about-hero__tag">علاج السمنه والنحافه</span>
               <span className="about-hero__tag">تغذية علاجية</span>
@@ -113,8 +113,6 @@ export default function About() {
           ))}
         </div>
       </section>
-
-      <Videos />
     </>
   );
 }

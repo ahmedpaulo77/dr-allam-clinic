@@ -6,21 +6,21 @@
 
 .before-after__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
-/* Result Card */
 .result-card {
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: all 0.35s ease;
+  width: 100%;
 }
-
 .result-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
@@ -157,13 +157,7 @@
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .before-after__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .before-after__grid {
     grid-template-columns: 1fr;
   }

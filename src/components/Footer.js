@@ -65,7 +65,7 @@ export default function Footer({ onNavigate }) {
           <h4 className="footer__col-title">تواصل معنا</h4>
           <div className="footer__contact-item">
             <MapPin size={16} className="footer__contact-icon" />
-            <span>بنها — عمارة بنك القاهرة، أمام برج مكة</span>
+            <span> بنها — عمارة بنك القاهرة، أمام برج مكة القاهره التجمع الخامس (قريبا )</span>
           </div>
           <div className="footer__contact-item">
             <Phone size={16} className="footer__contact-icon" />
@@ -73,7 +73,8 @@ export default function Footer({ onNavigate }) {
           </div>
           <div className="footer__contact-item">
             <Clock size={16} className="footer__contact-icon" />
-            <span>السبت – الخميس: 10ص – 10م</span>
+            <span>السبت – الخميس: 3م – 10م</span>
+            
           </div>
           <div className="footer__contact-item">
             <MessageCircle size={16} className="footer__contact-icon" />

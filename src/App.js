@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import BMICalculator from './components/BMICalculator';
 import Testimonials from './components/Testimonials';
+import Videos from './components/Videos';
 import About from './components/About';
 import BeforeAfter from './components/BeforeAfter';
 import Contact from './components/Contact';
@@ -24,13 +25,18 @@ function HomePage({ onNavigate }) {
       <Hero onNavigate={onNavigate} />
       <Services />
       <BMICalculator />
-      <Testimonials />
+      <Videos />
     </>
   );
 }
 
 function AboutPage() {
-  return <About />;
+  return (
+    <>
+      <About />
+      <Testimonials />
+    </>
+  );
 }
 
 function ResultsPage() {
@@ -46,7 +52,6 @@ function ContactPage() {
 export default function App() {
   const [page, setPage] = useState('home');
 
-  // Scroll to top on page change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [page]);
@@ -69,7 +74,6 @@ export default function App() {
       </main>
       <Footer onNavigate={setPage} />
 
-      {/* ===== زرار واتساب متثبت ===== */}
       <a
         href={WHATSAPP_URL}
         target="_blank"
