@@ -16,7 +16,7 @@ export default function Hero({ onNavigate }) {
         <div className="hero__content">
           <div className="hero__badge">
             <Award size={15} />
-            أخصائى تغذية معتمد — بنها
+            أخصائى تغذية معتمد : بنها /القاهره التجمع الخامس (قريبا )
           </div>
 
           <h1 className="hero__title">
