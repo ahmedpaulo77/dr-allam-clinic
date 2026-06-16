@@ -6,7 +6,8 @@ import result1 from '../images/1.jpg';
 import result2 from '../images/2.jpg';
 import result3 from '../images/3.jpg';
 import result6 from '../images/6.jpg';
-
+import result7 from '../images/7.jpg'; // تم إضافة الصورة الجديدة هنا
+ 
 const WHATSAPP_URL =
   'https://wa.me/201100690997?text=' +
   encodeURIComponent('السلام عليكم دكتور شفت النتائج وعايز ابدأ معاك.');
@@ -33,6 +34,12 @@ const RESULTS = [
   },
   {
     img: result6,
+    lost: '',
+    duration: '',
+    quote: '',
+  },
+  { // الكارد الجديد الخاص بالصورة 7
+    img: result7,
     lost: '',
     duration: '',
     quote: '',
